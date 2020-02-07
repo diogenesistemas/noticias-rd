@@ -3,13 +3,8 @@ let config = {
     method: "GET"
 }
 
-
-
 let boardNoticias = document.querySelector('#boardNoticias');
 let btnCarregar = document.querySelector('#carregar');
-
-
-
 
 
 function mostrarNaTela(listaNoticias) {
@@ -35,13 +30,11 @@ function mostrarNaTela(listaNoticias) {
 </div>
     `
         boardNoticias.insertAdjacentHTML('beforeend', novaNoticia);
-
     });
 }
 
 
 btnCarregar.onclick = () => {
-
 
     let resposta = fetch('https://newsapi.org/v2/top-headlines?country=br&apiKey=' + API_KEY, config)
         .then((resposta) => {
